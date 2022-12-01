@@ -1,27 +1,5 @@
-class Cliente {
-    //dentro de class, chamamos de atributos/propriedades
-    nome;
-    cpf;
-}
-
-class ContaCorrente {
-    agencia;
-    _saldo = 0;
-
-    sacar(valor) {
-        if(this._saldo >= valor){
-            this._saldo -= valor;
-            return valor;
-        }
-    }
-
-    depositar(valor) {
-        if(valor <= 0) {
-            return;
-        }
-        this._saldo += valor;
-    }
-}
+import {Cliente} from "./Cliente.js"; //necessário colocar a extensão do arquivo no caminho ".js"
+import {ContaCorrente} from "./ContaCorrente.js";
 
 const cliente1 = new Cliente();
 cliente1.nome = "Ricardo";
